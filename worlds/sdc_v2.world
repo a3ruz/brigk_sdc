@@ -1,0 +1,262 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <wind>
+      <linear_velocity>11 11 0</linear_velocity>
+    </wind>
+    <scene>
+      <shadows>0</shadows>
+    </scene>
+    <gui>
+      <camera name="user_camera">
+        <pose>-5 0 1 0 0.2 0</pose>
+      </camera>
+    </gui>
+    <physics type="ode">
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+          <sor>1.0</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>0.1</contact_max_correcting_vel>
+          <contact_surface_layer>0.0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>-1</real_time_update_rate>
+      <!--<max_step_size>0.0020</max_step_size>-->
+    </physics>
+    <gravity>0 0 -9.8</gravity>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>5000 5000</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="background">
+          <pose>000 0 -.1 0 0 0</pose>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>33.25 18</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Road</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name='SDC_WALL'>
+          <static>true</static>
+     <pose>14.212168 -1.148057 0 0 0 0</pose>
+    <include>
+      <uri>model://SDC_WALL</uri>
+      </include>
+     
+    </model>
+
+      <model name='AR_00'>
+        <pose>0 -8.895 0 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+      <include>
+      <uri>model://ar_00</uri>
+      </include>
+      </model>
+      <model name='AR_01'>
+        <pose>16.625 3.025 2.6 3.14159 -0 0</pose>
+        <scale>1 1 1</scale>
+           <include>
+      <uri>model://ar_01</uri>
+      </include>
+      </model>
+      <model name='AR_02'>
+        <pose>16.625 3.025 4.6 3.14159 -0 0</pose>
+        <scale>1 1 1</scale>
+       <include>
+      <uri>model://ar_02</uri>
+      </include>
+      </model>
+      <model name='AR_03'>
+        <pose>16.625 -3.025 2.7 3.14159 -0 0</pose>
+        <scale>1 1 1</scale>
+          <include>
+      <uri>model://ar_03</uri>
+      </include>
+      </model>
+      <model name='AR_04'>
+        <pose>16.625 -3.025 4.6 3.14159 -0 0</pose>
+        <scale>1 1 1</scale>
+          <include>
+      <uri>model://ar_04</uri>
+      </include>
+      </model>
+      <model name='AR_05'>
+        <pose>9.975 -8.895 2 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+      <include>
+      <uri>model://ar_05</uri>
+      </include>
+      </model>
+      <model name='AR_06'>
+        <pose>9.975 -8.895 4 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <include>
+      <uri>model://ar_06</uri>
+      </include>
+      </model>
+      <model name='AR_07'>
+        <pose>3.325 -8.895 2 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+          <include>
+      <uri>model://ar_07</uri>
+      </include>
+      </model>
+      <model name='AR_08'>
+        <pose>3.325 -8.895 4 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+          <include>
+      <uri>model://ar_08</uri>
+      </include>
+      </model>
+      <model name='AR_09'>
+        <pose>-3.325 -8.895 2 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+          <include>
+      <uri>model://ar_09</uri>
+      </include>
+      </model>
+      <model name='AR_10'>
+        <pose>-3.325 -8.895 4 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+       <include>
+      <uri>model://ar_10</uri>
+      </include>
+      </model>
+      <model name='AR_11'>
+        <pose>-9.975 -8.895 2 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <include>
+      <uri>model://ar_11</uri>
+      </include>
+      </model>
+      <model name='AR_12'>
+        <pose>-9.975 -8.895 4 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+      <include>
+      <uri>model://ar_12</uri>
+      </include>
+      </model>
+      <model name='AR_13'>
+        <pose>-16.625 -3.025 2 0 -0 0</pose>
+        <scale>1 1 1</scale>
+       <include>
+      <uri>model://ar_13</uri>
+      </include>
+      </model>
+      <model name='AR_14'>
+        <pose>-16.625 -3.025 4 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <include>
+      <uri>model://ar_14</uri>
+      </include>
+      </model>
+      <model name='AR_15'>
+        <pose>-16.625 3.025 4 0 -0 0</pose>
+        <scale>1 1 1</scale>
+       <include>
+      <uri>model://ar_15</uri>
+      </include>
+      </model>
+      <model name='AR_16'>
+        <pose>-16.625 3.025 2 0 -0 0</pose>
+        <scale>1 1 1</scale>
+      <include>
+      <uri>model://ar_16</uri>
+      </include>
+      </model>
+      <model name='AR_17'>
+        <pose>-9.975 8.895 2.6 3.14159 0 1.6208</pose>
+        <scale>1 1 1</scale>
+       <include>
+      <uri>model://ar_17</uri>
+      </include>
+      </model>
+      <model name='AR_18'>
+        <pose>-9.975 8.895 4.6 3.14159 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+      <include>
+      <uri>model://ar_18</uri>
+      </include>
+      </model>
+      <model name='AR_19'>
+        <pose>-3.325 8.895 2.7 3.14159 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+      <include>
+      <uri>model://ar_19</uri>
+      </include>
+      </model>
+      <model name='AR_20'>
+        <pose>-3.325 8.895 4.7 3.13159 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+    <include>
+      <uri>model://ar_20</uri>
+      </include>
+      </model>
+      <model name='AR_21'>
+        <pose>3.325 8.895 2.6 3.14159 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+       <include>
+      <uri>model://ar_21</uri>
+      </include>
+      </model>
+      <model name='AR_22'>
+        <pose>3.325 8.895 4.6 3.14159 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+          <include>
+      <uri>model://ar_22</uri>
+      </include>
+      </model>
+      <model name='AR_23'>
+        <pose>9.975 8.895 2.6 3.14159 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+       <include>
+      <uri>model://ar_23</uri>
+      </include>
+      </model>
+      <model name='AR_24'>
+        <pose>9.975 8.895 4.6 3.14159 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+       <include>
+      <uri>model://ar_24</uri>
+      </include>
+      </model>
+
+    
+  </world>
+</sdf>

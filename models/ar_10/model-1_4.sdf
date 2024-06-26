@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><sdf version="1.4">
+  <model name="AR_10">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://ar_10/meshes/AR_10.dae</uri>
+          <scale>1.42 1.42 1.42</scale></mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
